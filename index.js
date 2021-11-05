@@ -232,7 +232,7 @@ Example, if getArtistByIndex is invoked with the artists array and the number 0,
 function getArtistByIndex(array, index) {
   return `the artist at index ${index} is ${array[index]["name"]}`;
 }
-console.log("task 3", getArtistByIndex(artists, 0));
+console.log("task 3,", getArtistByIndex(artists, 0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -245,10 +245,15 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  newArray = [];
+  const newArray = [];
+  for (let i = 0; i < array.length; i++){
+    newArray.push(array[i]["years"].split(" - "));
+    
+  }
+  return newArray;
 }
 
-
+console.log(":(");
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
